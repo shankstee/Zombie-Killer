@@ -1,0 +1,18 @@
+<div class="container">
+    <ul>
+        {{#each zombies}} 
+            {{#unless headShot}}
+                <li>{{zombieName}}</li><button class="addHeadshot" data-id="{{id}}">{{headShot}}</button>
+            {{/unless}}
+
+        {{/each}}
+    </ul>
+
+    <ol>
+        {{#each zombies}}
+            {{#if headShot}}
+                <li>{{zombieName}}</li><button data-id="{{id}}">{{headShot}}</button>
+            {{/if}}
+        {{/each}}
+    </ol>
+</div>
